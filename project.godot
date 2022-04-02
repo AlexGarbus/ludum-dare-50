@@ -9,6 +9,11 @@
 config_version=4
 
 _global_script_classes=[ {
+"base": "Node2D",
+"class": "Ceiling",
+"language": "GDScript",
+"path": "res://spikes/ceiling/ceiling.gd"
+}, {
 "base": "",
 "class": "GitAPI",
 "language": "NativeScript",
@@ -18,10 +23,17 @@ _global_script_classes=[ {
 "class": "Player",
 "language": "GDScript",
 "path": "res://player/player.gd"
+}, {
+"base": "KinematicBody2D",
+"class": "Spike",
+"language": "GDScript",
+"path": "res://spikes/spike.gd"
 } ]
 _global_script_class_icons={
+"Ceiling": "",
 "GitAPI": "",
-"Player": ""
+"Player": "",
+"Spike": ""
 }
 
 [application]

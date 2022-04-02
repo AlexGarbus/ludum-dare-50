@@ -1,13 +1,17 @@
+class_name Spike
 extends KinematicBody2D
 
 
 onready var gravity: float = ProjectSettings.get("physics/2d/default_gravity")
 
-var _velocity = Vector2.ZERO
+var gravity_enabled := false
+
+var _velocity := Vector2.ZERO
 
 
 func _physics_process(delta: float) -> void:
-	_velocity.y += gravity * delta
+	if gravity_enabled:
+		_velocity.y += gravity * delta
 	move_and_slide(_velocity)
 
 
