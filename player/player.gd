@@ -2,6 +2,8 @@ class_name Player
 extends KinematicBody2D
 
 
+signal died
+
 export var move_speed := 1.0
 
 onready var sprite := $AnimatedSprite
@@ -25,3 +27,9 @@ func _get_animation(direction: Vector2) -> String:
 	if not direction.x == 0:
 		return "move"
 	return "idle"
+
+
+func _on_SpikeDetector_body_entered(body: Node) -> void:
+	set_process(false)
+	set_physics_process(false)
+	emit_signal("died")
