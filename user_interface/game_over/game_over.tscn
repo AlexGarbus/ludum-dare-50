@@ -13,7 +13,7 @@ script = ExtResource( 2 )
 anchor_right = 1.0
 anchor_bottom = 1.0
 
-[node name="Label" type="Label" parent="."]
+[node name="Message" type="Label" parent="."]
 anchor_left = 0.5
 anchor_right = 0.5
 margin_left = -72.0
@@ -22,6 +22,21 @@ margin_right = 72.0
 margin_bottom = 43.0
 text = "You were
 squished."
+align = 1
+valign = 1
+
+[node name="Score" type="Label" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -72.0
+margin_top = -4.0
+margin_right = 72.0
+margin_bottom = 12.0
+text = "Score: %s"
+align = 1
+valign = 1
 
 [node name="RetryButton" type="Button" parent="."]
 anchor_left = 0.5

@@ -6,6 +6,8 @@ signal died
 
 export var move_speed := 1.0
 
+var _dead := false
+
 onready var sprite := $AnimatedSprite
 
 
@@ -30,6 +32,10 @@ func _get_animation(direction: Vector2) -> String:
 
 
 func _on_SpikeDetector_body_entered(body: Node) -> void:
+	if _dead:
+		return
+
+	_dead = true
 	set_process(false)
 	set_physics_process(false)
 	emit_signal("died")
