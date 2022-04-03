@@ -6,6 +6,7 @@
 [node name="Ceiling" type="Node2D"]
 script = ExtResource( 2 )
 spike_scene = ExtResource( 1 )
+drop_distance = 4.0
 
 [node name="Spikes" type="Node2D" parent="."]
 
