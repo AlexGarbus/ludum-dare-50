@@ -10,6 +10,7 @@ var _dead := false
 var _moving := false
 var _wall_detector_cast_length := 0.0
 
+onready var death_sound := $DeathSound
 onready var sprite := $AnimatedSprite
 onready var tween := $Tween
 onready var wall_detector := $WallDetector
@@ -54,9 +55,12 @@ func _on_Player_body_entered(body: Node) -> void:
 	if _dead:
 		return
 
-	_dead = true
 	set_process(false)
 	set_physics_process(false)
+	
+	death_sound.play()
+	
+	_dead = true
 	emit_signal("died")
 
 

@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/fall.wav-51e05fba763cf8af60ee4c80a96e2aa8.sample"
+
+[deps]
+
+source_file="res://spikes/ceiling/fall.wav"
+dest_files=[ "res://.import/fall.wav-51e05fba763cf8af60ee4c80a96e2aa8.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

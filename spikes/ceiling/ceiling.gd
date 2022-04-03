@@ -12,6 +12,7 @@ var spawn_count := 0
 
 var _spike_count := 0
 
+onready var fall_sound := $FallSound
 onready var spawn_timer := $SpawnTimer
 onready var spikes := $Spikes
 onready var tween := $Tween
@@ -36,6 +37,7 @@ func _spawn_spikes() -> void:
 			spike.gravity_enabled = true
 			spike.position = spikes.get_child(i).position
 	
+	fall_sound.play()
 	spawn_count += 1
 
 
