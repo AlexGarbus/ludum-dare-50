@@ -82,7 +82,7 @@ points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
 
 [node name="Game" type="Node"]
 script = ExtResource( 5 )
-perfect_drop_count = 20
+perfect_drop_count = 18
 
 [node name="TileMap" type="TileMap" parent="."]
 tile_set = SubResource( 1 )
