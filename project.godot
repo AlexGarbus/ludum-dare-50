@@ -33,13 +33,19 @@ _global_script_classes=[ {
 "class": "Spike",
 "language": "GDScript",
 "path": "res://spikes/spike.gd"
+}, {
+"base": "Control",
+"class": "Tutorial",
+"language": "GDScript",
+"path": "res://user_interface/tutorial/tutorial.gd"
 } ]
 _global_script_class_icons={
 "Ceiling": "",
 "GameOver": "",
 "GitAPI": "",
 "Player": "",
-"Spike": ""
+"Spike": "",
+"Tutorial": ""
 }
 
 [application]
