@@ -4,7 +4,12 @@ extends Control
 
 onready var message := $Message
 onready var score := $Score
+onready var retry_button := $RetryButton
 
+
+func initialize_focus() -> void:
+	retry_button.grab_focus()
+	
 
 func set_score(points: int, perfect := false) -> void:
 	if perfect:

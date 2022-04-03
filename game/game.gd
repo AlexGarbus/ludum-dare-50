@@ -11,6 +11,7 @@ func _on_Player_died() -> void:
 	ceiling.stop()
 	
 	game_over.visible = true
+	game_over.initialize_focus()
 	if ceiling.drop_count == perfect_drop_count:
 		game_over.set_score(ceiling.spawn_count, true)
 	else:
