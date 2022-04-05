@@ -26,9 +26,10 @@ func _process(delta: float) -> void:
 	
 	var direction = _get_move_direction()
 	
-	wall_detector.cast_to = direction * _wall_detector_cast_length
-	if not wall_detector.is_colliding():
-		_start_tween(position + wall_detector.cast_to)
+	if not direction == Vector2.ZERO:
+		wall_detector.cast_to = direction * _wall_detector_cast_length
+		if not wall_detector.is_colliding():
+			_start_tween(position + wall_detector.cast_to)
 
 	var animation = _get_animation(direction)
 	if not sprite.animation == animation:
